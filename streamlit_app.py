@@ -68,7 +68,7 @@ if __name__ == "__main__":
     
     all_station_info_df = pd.read_sql_query(f'SELECT * FROM citibike_status WHERE "id" = {options};', connector)
 
-    '''
+    
     left_col, right_col = st.columns(2)
     for col_name in all_station_info_df.columns:
         with left_col:
@@ -76,12 +76,14 @@ if __name__ == "__main__":
             #left_col.metric(label="ID", value
         with right_col:
             st.write(all_station_info_df[col_name][0])
-    '''
     
+    
+    '''
     col1, col2 = st.columns(2)
     for col_name in all_station_info_df.columns:
         #col1.metric(x.upper() for x in col_name["kind"])
         col2.metric(all_station_info_df.iloc(["kind"][0]))
+    '''
     
     #Map implementation--->
     #mapdata = pd.read_sql_query(f'SELECT * FROM station_info WHERE "STATION_ID" = {options};', connector)
