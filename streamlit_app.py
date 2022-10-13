@@ -54,7 +54,7 @@ if __name__ == "__main__":
     card_template = """
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
                     <div class="card bg-light mb-3" >
-                        <H5 class="card-header">{}.  <a href={} style="display: inline-block" target="_blank">{}</h5>
+                        <H5 class="card-header">{}.  <a href={https://streamlit.io/} style="display: inline-block" target="_blank">{}</h5>
                             <div class="card-body">
                                 <span class="card-text"><b>Author(s): </b>{}</span><br/>
                                 <span class="card-text"><b>Year: </b>{}</span><br/>
