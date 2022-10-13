@@ -1,6 +1,8 @@
 import pandas as pd
 from snowflake import connector
 import streamlit as st
+import streamlit.bootstrap
+
 
 
 def get_snowflake_connector():
