@@ -50,6 +50,22 @@ if __name__ == "__main__":
     """,
         unsafe_allow_html=True,
     )
+    
+    self.card_template = """
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+                    <div class="card bg-light mb-3" >
+                        <H5 class="card-header">{}.  <a href={} style="display: inline-block" target="_blank">{}</h5>
+                            <div class="card-body">
+                                <span class="card-text"><b>Author(s): </b>{}</span><br/>
+                                <span class="card-text"><b>Year: </b>{}</span><br/>
+                                <span class="card-text"><b>Journal: </b>{}</span><br/>
+                                <span class="card-text"><b>DOI: </b>{}</span><br/>
+                                <span class="card-text"><b>Score: </b>{}</span><br/><br/>
+                                <p class="card-text">{}</p>
+                            </div>
+                        </div>
+                    </div>
+        """
 
     
 #Feature 1: station status and info----------------------------------------------------------------------------->
@@ -62,16 +78,22 @@ if __name__ == "__main__":
     selected_station_description = all_station_info_df[all_station_info_df["STATION_NAME"] == selected_station_name].reset_index()
 
     options = int(selected_station_description["STATION_ID"][0])
-
+    
     all_station_info_df = pd.read_sql_query(f'SELECT * FROM citibike_status WHERE "id" = {options};', connector)
+    
+    for index, row in st.session_state.all_station_info_df.iterrows():
+    st.markdown(self.card_template.format(str(index + 1), paper_url, row['title'], row['authors'], row['published_year'], row['journal'], row['doi'], row['score'], row['abstract']), unsafe_allow_html=True)
+    
+
     left_col, right_col = st.columns(2)
     for col_name in all_station_info_df.columns:
         with left_col:
             st.write(*[x.upper() for x in col_name.split("_")], ":")
+            #left_col.metric(label="ID", value
         with right_col:
             st.write(all_station_info_df[col_name][0])
     
-    col1, col2 = st.beta_columns(2)
+    col1, col2 = st.columns(2)
     col1.metric("ID", "119")
     col2.metric("STATION STATUS", "Active")
     
