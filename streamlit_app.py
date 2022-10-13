@@ -1,3 +1,4 @@
+pip install streamlit-aggrid
 import pandas as pd
 from snowflake import connector
 import streamlit as st
