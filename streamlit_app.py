@@ -19,17 +19,17 @@ if __name__ == "__main__":
    
    [class="css-uc1cuc e8zbici2"]{
    background-color: #e9e9fa;
-    position:relative;
+    position:fixed;
     opacity: 0.3;
     background: linear-gradient(135deg, #c957c855 25%, transparent 25%) -13px 0/ 26px 26px, linear-gradient(225deg, #c957c8 25%, transparent 25%) -13px 0/ 26px 26px, linear-gradient(315deg, #c957c855 25%, transparent 25%) 0px 0/ 26px 26px, linear-gradient(45deg, #c957c8 25%, #e9e9fa 25%) 0px 0/ 26px 26px;
-    }
+    }.sticky
     
     [class="css-1g1an1w edgvbvh9"]{
     background-color: #EEEEEE;
-    position:relative;
+    position:fixed;
     border: 2px solid #DCDCDC;
     border-radius: 48px;
-    }
+    }.sticky
     
     [class="css-10trblm e16nr0p30"]{
     opactiy: 0.7;
