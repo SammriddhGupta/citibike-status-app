@@ -29,7 +29,7 @@ if __name__ == "__main__":
     position:fixed;
     border: 2px solid #DCDCDC;
     border-radius: 48px;
-    }.sticky
+    }
     
     [class="css-10trblm e16nr0p30"]{
     opactiy: 0.7;
