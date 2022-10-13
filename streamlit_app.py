@@ -53,7 +53,7 @@ if __name__ == "__main__":
     )
     
 
-    info_df = pd.read_csv("../dataset/station_metadata.csv)
+    info_df = pd.read_csv("../dataset/station_metadata.csv")
     AgGrid(info_df)
     
 #Feature 1: station status and info----------------------------------------------------------------------------->
