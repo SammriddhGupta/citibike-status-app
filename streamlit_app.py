@@ -71,7 +71,7 @@ if __name__ == "__main__":
         with right_col:
             st.write(all_station_info_df[col_name][0])
     
-    col1, col2 = st.columns(2)
+    col1, col2 = st.beta_columns(2)
     col1.metric("ID", "119")
     col2.metric("STATION STATUS", "Active")
     
