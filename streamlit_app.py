@@ -82,7 +82,7 @@ if __name__ == "__main__":
     all_station_info_df = pd.read_sql_query(f'SELECT * FROM citibike_status WHERE "id" = {options};', connector)
     
     for index, row in all_station_info_df.iterrows():
-        st.markdown(card_template.format(str(index + 1), row['station id'], row['latitude'], row['longitude'], row['incoming trips'], row['outgoing trips'], row['all trips'], row['kind']), unsafe_allow_html=True)
+        st.markdown(card_template.format(str(index + 1), row['station_id'], row['latitude'], row['longitude'], row['incoming_trips'], row['outgoing_trips'], row['all_trips'], row['kind']), unsafe_allow_html=True)
     
 
     left_col, right_col = st.columns(2)
