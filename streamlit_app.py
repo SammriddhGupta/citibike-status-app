@@ -19,6 +19,7 @@ if __name__ == "__main__":
    
    [class="css-uc1cuc e8zbici2"]{
    background-color: #e9e9fa;
+    position:sticky;
     opacity: 0.3;
     background: linear-gradient(135deg, #c957c855 25%, transparent 25%) -13px 0/ 26px 26px, linear-gradient(225deg, #c957c8 25%, transparent 25%) -13px 0/ 26px 26px, linear-gradient(315deg, #c957c855 25%, transparent 25%) 0px 0/ 26px 26px, linear-gradient(45deg, #c957c8 25%, #e9e9fa 25%) 0px 0/ 26px 26px;
     }
