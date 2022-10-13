@@ -51,7 +51,7 @@ if __name__ == "__main__":
         unsafe_allow_html=True,
     )
     
-    self.card_template = """
+    card_template = """
                 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
                     <div class="card bg-light mb-3" >
                         <H5 class="card-header">{}.  <a href={} style="display: inline-block" target="_blank">{}</h5>
@@ -82,7 +82,7 @@ if __name__ == "__main__":
     all_station_info_df = pd.read_sql_query(f'SELECT * FROM citibike_status WHERE "id" = {options};', connector)
     
     for index, row in st.session_state.all_station_info_df.iterrows():
-        st.markdown(self.card_template.format(str(index + 1), paper_url, row['title'], row['authors'], row['published_year'], row['journal'], row['doi'], row['score'], row['abstract']), unsafe_allow_html=True)
+        st.markdown(card_template.format(str(index + 1), paper_url, row['title'], row['authors'], row['published_year'], row['journal'], row['doi'], row['score'], row['abstract']), unsafe_allow_html=True)
     
 
     left_col, right_col = st.columns(2)
