@@ -80,7 +80,7 @@ if __name__ == "__main__":
     
     col1, col2 = st.columns(2)
     for col_name in all_station_info_df.columns:
-        col1.metric(x.upper() for x in col_name("kind"))
+        col1.metric(x.upper() for x in col_name["kind"])
         col2.metric(all_station_info_df[col_name][0])
     
     #Map implementation--->
